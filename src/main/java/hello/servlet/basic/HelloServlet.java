@@ -12,7 +12,18 @@ import java.io.IOException;
 public class HelloServlet extends HttpServlet {
 
     @Override // 서블릿이 호출되면 서비스 메서드가 호출된다.
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("HelloServlet.service");
+        System.out.println("request = " + request);
+        System.out.println("response = " + response);
+
+        String username = request.getParameter("username");
+        System.out.println("username = " + username);
+
+        response.setContentType("text/plain");
+        response.setCharacterEncoding("utf-8");
+        response.getWriter().write("hello " + username);
+
+
     }
 }
