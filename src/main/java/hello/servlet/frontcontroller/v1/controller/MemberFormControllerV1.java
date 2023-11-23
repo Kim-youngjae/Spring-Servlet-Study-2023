@@ -1,4 +1,4 @@
-package hello.servlet.frontcontroller.controller;
+package hello.servlet.frontcontroller.v1.controller;
 
 import hello.servlet.frontcontroller.v1.ControllerV1;
 
