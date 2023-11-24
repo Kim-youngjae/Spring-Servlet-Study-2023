@@ -28,7 +28,7 @@ public class FrontControllerServletV1 extends HttpServlet {
         System.out.println("FrontControllerServletV1.service"); // -> 로거로 나중에는 변경하기
 
         String requestURI = request.getRequestURI();
-        ControllerV1 controller = controllerMap.get(requestURI);
+        ControllerV1 controller = controllerMap.get(requestURI); // controllerMap의 URI와 비교해서 적절한 컨트롤러 호출
 
         if (controller == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
